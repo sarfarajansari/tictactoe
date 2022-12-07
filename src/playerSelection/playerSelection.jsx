@@ -5,7 +5,6 @@ import {
   Container,
   Header,
   Player,
-  XO_Container,
 } from "../helper/helper.styled";
 
 const PlayerContainer = styled.div`

@@ -1,4 +1,3 @@
-import { Modal } from "antd";
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { GameContext } from "../gameContext";
@@ -32,7 +31,7 @@ const BoardGrid = styled.div`
 `;
 
 const Tictactoe = () => {
-  const { humanPlayer, state, play, isTerminal, lineState, restartGame } =
+  const { humanPlayer, state, play, isTerminal, lineState } =
     useContext(GameContext);
 
   if (!humanPlayer) return <></>;

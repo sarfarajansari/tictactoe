@@ -15,22 +15,7 @@ export const Container = styled.div`
 
 `;
 
-export const XO_Container = styled.div`
-  @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
-  font-size: 10rem;
-  color: rgb(247, 95, 78);
-  width: 223px;
-  height: 223px;
 
-  font-family: "Patrick Hand", cursive;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-
-  @media screen and (max-width: 720px) {
-    font-size: 5rem;
-  }
-`;
 
 export const Player = styled.div`
   padding-top: 100%;
