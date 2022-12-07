@@ -1,11 +1,8 @@
+import { Select } from "antd";
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { GameContext } from "../gameContext";
-import {
-  Container,
-  Header,
-  Player,
-} from "../helper/helper.styled";
+import { Container, Header, Player } from "../helper/helper.styled";
 
 const PlayerContainer = styled.div`
   display: grid;
@@ -19,9 +16,9 @@ const PlayerContainer = styled.div`
 
 const PlayerSelection = () => {
   const playerOptions = ["X", "O"];
-  const { humanPlayer, startGame } = useContext(GameContext);
+  const { humanPlayer, startGame, gameMode } = useContext(GameContext);
 
-  if (humanPlayer) return <></>;
+  if (humanPlayer || !gameMode) return <></>;
 
   return (
     <Container>
@@ -35,12 +32,6 @@ const PlayerSelection = () => {
             onClick={() => startGame(player)}
           />
         ))}
-
-        {/* {playerOptions.map((player, index) => (
-          <XO_Container key={index} onClick={() => startGame(player)}>
-            {player}
-          </XO_Container>
-        ))} */}
       </PlayerContainer>
     </Container>
   );

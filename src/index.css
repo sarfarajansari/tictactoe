@@ -23,3 +23,35 @@ code {
 .ant-modal-close-x {
   display: none !important;
 }
+
+.custom-btn {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #2ecc71;
+  padding: 14px clamp(50px, 13vw, 100px);
+  outline: none;
+  color: white;
+  border-radius: 1.5rem;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.custom-btn:hover {
+  background-color: #2ecc71;
+}
+
+.custom-btn.primary {
+  border-color: #3e7ae9;
+}
+.custom-btn.primary:hover {
+  background-color: #3e7ae9;
+}
+
+.custom-btn.secondary {
+  border-color: #990f02;
+}
+.custom-btn.secondary:hover {
+  background-color: #990f02;
+}

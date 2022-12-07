@@ -4,7 +4,8 @@ import GameProvider from "./gameContext";
 import Header from "./header/header";
 import PlayerSelection from "./playerSelection/playerSelection";
 import Tictactoe from "./tictactoe/tictactoe";
-import 'animate.css';
+import "animate.css";
+import GameMode from "./gameMode/gameMode";
 
 const ContentContainer = styled.div`
   padding-top: 100px;
@@ -16,6 +17,7 @@ function App() {
       <Header />
       <GameProvider>
         <ContentContainer>
+          <GameMode />
           <PlayerSelection />
           <Tictactoe />
         </ContentContainer>

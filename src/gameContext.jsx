@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import {
+  getActions,
   getIsTerminal,
   getNextState,
   getPlayer,
@@ -7,16 +8,28 @@ import {
   utility,
 } from "./AI/minimax";
 
-export const GameContext = React.createContext({});
-
 const initialState = [
   [" ", " ", " "],
   [" ", " ", " "],
   [" ", " ", " "],
 ];
+export const GameContext = React.createContext({
+  humanPlayer: "",
+  setHumanPlayer: (x) => {},
+  startGame: () => {},
+  state: initialState,
+  play: (player) => {},
+  isTerminal: false,
+  lineState: null,
+  restartGame: () => {},
+  resultText: null,
+  gameMode: null,
+  setGameMode: (x) => {},
+});
 
 const GameProvider = ({ children }) => {
   const [humanPlayer, setHumanPlayer] = useState(null);
+  const [gameMode, setGameMode] = useState(null);
 
   const [state, setState] = useState(initialState);
 
@@ -49,10 +62,30 @@ const GameProvider = ({ children }) => {
     return getIsTerminal(state);
   }, [state]);
 
+  const getBotAction = () => {
+    if (gameMode === "Unbeatable") {
+      return miniMax(state)[1];
+    }
+
+    const availableActions = getActions(state);
+
+    let randomAction = () =>
+      availableActions[Math.floor(Math.random() * availableActions.length)];
+
+    if (gameMode === "Easy") return randomAction();
+
+    let best = miniMax(state)[1];
+
+    let mixed = [best, randomAction(), best, randomAction(), best];
+
+    return mixed[Math.floor(Math.random() * mixed.length)];
+  };
+
+  //bot play
   useEffect(() => {
     if (currentPlayer !== botPlayer || isTerminal) return;
 
-    const bestAction = miniMax(state)[1];
+    const bestAction = getBotAction();
 
     const nextState = getNextState(state, bestAction);
     setState(nextState);
@@ -136,7 +169,9 @@ const GameProvider = ({ children }) => {
         isTerminal,
         lineState,
         restartGame,
-        resultText
+        resultText,
+        gameMode,
+        setGameMode,
       }}
     >
       {children}

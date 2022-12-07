@@ -70,7 +70,7 @@ export const getIsTerminal = (state) => {
   return numberOfEmptyCells === 0;
 };
 
-const getActions = (state) => {
+export const getActions = (state) => {
   const actions = [];
 
   state.forEach((row, i) => {
