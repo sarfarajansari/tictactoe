@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# TicTacToe 🎮
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a **TicTacToe game** built in **React** with a sleek, user-friendly interface. The game includes three difficulty levels—**easy**, **intermediate**, and **unbeatable**—with the unbeatable mode powered by the **minimax algorithm** for a challenging experience.
 
-## Available Scripts
 
-In the project directory, you can run:
+https://github.com/user-attachments/assets/675eaafc-3377-4b1f-9e52-1ee7a300defa
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Multiple Difficulty Levels**:
+  - **Easy**: Great for beginners.
+  - **Intermediate**: Adds a bit more of a challenge.
+  - **Unbeatable**: Uses the minimax algorithm to ensure flawless moves every time.
+- **Clean, Engaging UI**: A carefully designed interface to make the gameplay enjoyable and visually appealing.
 
-### `npm test`
+## Fun Fact 🎉
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I created this app during my first-year calculus class. While the rest of the class was deep into derivatives, I was busy coding TicTacToe at the back of the room—bringing a bit of my own “calculus” to life in the form of unbeatable AI moves!
 
-### `npm run build`
+## Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sarfarajansari/tictactoe.git
+   cd tictactoe
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+   The game will be available at `http://localhost:3000`.
